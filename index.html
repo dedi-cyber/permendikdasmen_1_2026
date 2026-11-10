@@ -282,5 +282,20 @@ const links=[...document.querySelectorAll('.navlinks a')];
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(link=>link.classList.toggle('active',link.getAttribute('href')==='#'+entry.target.id))}}),{rootMargin:'-25% 0px -65% 0px'});
 sections.forEach(section=>observer.observe(section));
 </script>
+
+<footer class="developer-credit" aria-label="Kredit pengembang">
+  <span>Dikembangkan oleh D.E.A. 2026</span>
+</footer>
+<style>
+  .developer-credit {
+    padding: 1.25rem 1rem;
+    text-align: center;
+    color: var(--muted, #64748b);
+    font-size: .875rem;
+    border-top: 1px solid var(--border, #e2e8f0);
+    background: var(--surface, #fff);
+  }
+</style>
+
 </body>
 </html>
